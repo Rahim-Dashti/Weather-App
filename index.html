@@ -14,6 +14,55 @@
     />
   </head>
   <body>
-    <div class="weather-app"></div>
+    <div class="weather-app">
+      <div class="search-bar">
+        <form
+          action="https://api.weatherapi.com/v1/current.json"
+          method="get"
+          id="search-form"
+          onsubmit="return false"
+        >
+          <input
+            type="hidden"
+            name="key"
+            value="d07e568ac6b24d47988152237232305"
+          />
+          <input type="text" name="city" id="city" value="Tehran" required />
+          <button
+            type="submit"
+            form="search-form"
+            onclick="get_weather(city.value)"
+          >
+            Search
+          </button>
+        </form>
+      </div>
+      <div class="current-info">
+        <div class="current-country"></div>
+        <div class="current-city"></div>
+        <div class="current-temp"></div>
+        <div class="current-condition"></div>
+        <div class="current-weather-icon">
+          <img src="" alt="weather-icon" class="current-weather-icon-img" />
+        </div>
+        <div class="local-time"></div>
+      </div>
+      <div class="animated-info">
+        <div class="animated-weather"></div>
+      </div>
+      <div class="wind-info">
+        <div class="temp-feel"></div>
+        <div class="wind-speed"></div>
+        <div class="humidity"></div>
+      </div>
+      <div class="footer">
+        <p class="copywrite">
+          Copyright © 2023
+          <a class="footer-link" href="https://github.com/Rahim-Dashti"
+            >rahim dashti</a
+          >
+        </p>
+      </div>
+    </div>
   </body>
 </html>
