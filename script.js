@@ -17,6 +17,9 @@ function print_weather_info(weather_info) {
   let current_city = document.querySelector(".current-city");
   current_city.textContent = weather_info["location"]["name"];
 
+  let current_state = document.querySelector(".current-state");
+  current_state.textContent = weather_info["location"]["region"];
+
   let current_temp = document.querySelector(".current-temp");
   current_temp.textContent = weather_info["current"]["temp_c"];
 
